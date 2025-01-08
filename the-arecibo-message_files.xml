@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files>
+  <file name="The_Arecibo_Message.flac" source="derivative">
+    <format>Flac</format>
+    <original>The_Arecibo_Message.wav</original>
+    <mtime>1673931808</mtime>
+    <size>2445503</size>
+    <md5>e6744b81a0ad945eeb1bd7f102dc81a4</md5>
+    <crc32>5f4e4c53</crc32>
+    <sha1>6c5d70ac35f4a8824152550252db14f2dd3e1a78</sha1>
+    <length>167.9</length>
+  </file>
+  <file name="The_Arecibo_Message.mp3" source="derivative">
+    <bitrate>34.2</bitrate>
+    <length>02:48</length>
+    <format>VBR MP3</format>
+    <original>The_Arecibo_Message.wav</original>
+    <mtime>1673931800</mtime>
+    <size>719092</size>
+    <md5>3f0466a913f999b6d5c6a275676b1f72</md5>
+    <crc32>496be828</crc32>
+    <sha1>efe6bb2b65400268771c245f1c3ac092d256c423</sha1>
+  </file>
+  <file name="The_Arecibo_Message.png" source="derivative">
+    <format>PNG</format>
+    <original>The_Arecibo_Message.wav</original>
+    <mtime>1673931821</mtime>
+    <size>3936</size>
+    <md5>406a98c2e9427b44f63987a8062faba4</md5>
+    <crc32>38b4ad86</crc32>
+    <sha1>1da6208bf58e00b2271117f6039af9cf72196736</sha1>
+  </file>
+  <file name="The_Arecibo_Message.wav" source="original">
+    <mtime>1673931723</mtime>
+    <size>3702238</size>
+    <md5>7feb7f0811a4d030d0873141b5d7e8ef</md5>
+    <crc32>62b24f04</crc32>
+    <sha1>06ee1c9bb4bc449abd8eebe6791d9bd4742ef953</sha1>
+    <format>WAVE</format>
+    <length>167.9</length>
+    <track>01</track>
+  </file>
+  <file name="The_Arecibo_Message_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>The_Arecibo_Message.wav</original>
+    <mtime>1673931829</mtime>
+    <size>228570</size>
+    <md5>8f3567bb915883301e1594ea80725eb2</md5>
+    <crc32>11646aad</crc32>
+    <sha1>a76dd0fa2ae91e5f2005b701cf66daf5a8ee18b5</sha1>
+  </file>
+  <file name="__ia_thumb.jpg" source="original">
+    <mtime>1673931838</mtime>
+    <size>574</size>
+    <md5>b5bc13fdd9436d18036c0ce3dbc15666</md5>
+    <crc32>5b2f0b9c</crc32>
+    <sha1>f6b0ceed2a46411d6f6c63cbbf9e3cea55e2b04b</sha1>
+    <format>Item Tile</format>
+    <rotation>0</rotation>
+  </file>
+  <file name="the-arecibo-message_archive.torrent" source="metadata">
+    <btih>fe7ba945dabcca3491bc2281ba395fb243f61325</btih>
+    <mtime>1673931838</mtime>
+    <size>2843</size>
+    <md5>e94b015f91f1e12d5c4f10038a17445c</md5>
+    <crc32>590749e7</crc32>
+    <sha1>4f60e37a9024fcb94c9624444aace04027a3975a</sha1>
+    <format>Archive BitTorrent</format>
+  </file>
+  <file name="the-arecibo-message_files.xml" source="original">
+    <format>Metadata</format>
+    <md5>76d88648e0a656c2efcb425421a8a5c9</md5>
+    <summation>md5</summation>
+  </file>
+  <file name="the-arecibo-message_meta.sqlite" source="original">
+    <mtime>1673931749</mtime>
+    <size>20480</size>
+    <md5>6a1b7bafd58276bc182128d483b90bc0</md5>
+    <crc32>2d0440fa</crc32>
+    <sha1>b218625ba797b6aa3b380bb9cee85b96cb883b57</sha1>
+    <format>Metadata</format>
+  </file>
+  <file name="the-arecibo-message_meta.xml" source="original">
+    <mtime>1673931836</mtime>
+    <size>1115</size>
+    <md5>fe3d88ccf431b940a07d1fc67300a015</md5>
+    <crc32>74828ec6</crc32>
+    <sha1>dae12aec340d691d495f65461cea014f42bb0852</sha1>
+    <format>Metadata</format>
+  </file>
+</files>
