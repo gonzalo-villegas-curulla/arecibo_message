@@ -1,7 +1,7 @@
 # arecibo_message
 
 
-Method 1 produces the following pixel result:
+Method 1 of `anal.m` produces the following pixel result:
 
 <p align="center">
   <img src="assets/message_pixels.png" width="50%" />
