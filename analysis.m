@@ -16,9 +16,9 @@ xh                 = hilbert(x).*exp(-i*2*pi*fc*t);
 demodulated_signal = (1/(2*pi*fdev))*[zeros(1,size(xh,2)); diff(unwrap(angle(xh)))*fs];
 
 % Low-pass filt the high-frequency noise
-lpFilt = designfilt('lowpassfir', 'PassbandFrequency', bit_rate, ...
+LPfilt_obj = designfilt('lowpassfir', 'PassbandFrequency', bit_rate, ...
                     'StopbandFrequency', bit_rate*1.5, 'SampleRate', fs);
-filtered_signal = filtfilt(lpFilt, demodulated_signal);
+filtered_signal = filtfilt(LPfilt_obj, demodulated_signal);
 
 % Normalize the signal 
 normalized_signal = filtered_signal - min(filtered_signal);
@@ -51,9 +51,9 @@ dt       = 1/fs;
 samples_per_bit = fs / bit_rate;
 
 % Remove carrier frequency using a band-pass filter
-bpFilt = designfilt('bandpassfir', 'FilterOrder', 100, ...
+PBfilt_obj = designfilt('bandpassfir', 'FilterOrder', 100, ...
     'CutoffFrequency1', fc - 20, 'CutoffFrequency2', fc + 20, 'SampleRate', fs);
-x_filtered = filtfilt(bpFilt, x);
+x_filtered = filtfilt(PBfilt_obj, x);
 
 % Step 2: Compute instantaneous phase
 analytic_signal = hilbert(x_filtered);        % Analytic signal
@@ -63,9 +63,9 @@ inst_phase = unwrap(angle(analytic_signal));  % Unwrap the phase
 inst_freq = diff(inst_phase)/dt * 1/(2*pi);
 
 % Low-pass filter the frequency variations to remove noise
-lpFilt = designfilt('lowpassfir', 'PassbandFrequency', bit_rate, ...
+SBfilt_obj = designfilt('lowpassfir', 'PassbandFrequency', bit_rate, ...
     'StopbandFrequency', bit_rate * 1.5, 'SampleRate', fs);
-demodulated_signal = filtfilt(lpFilt, inst_freq);
+demodulated_signal = filtfilt(SBfilt_obj, inst_freq);
 
 % Normalize the signal and extract bits by thresholding
 normalized_signal = demodulated_signal - min(demodulated_signal);
@@ -119,12 +119,12 @@ inst_freq = diff(inst_phase)/dt  * (1/(2 * pi)) ;
 % lpFilt = designfilt('lowpassfir', 'PassbandFrequency', 2*fc+1.0*fdev, ...
 %     'StopbandFrequency', 2*fc+2.0*fdev, 'SampleRate', fs);
 
-lpFilt = designfilt('bandpassfir','FilterOrder',20, ...
+BPfilt_obj = designfilt('bandpassfir','FilterOrder',20, ...
     'CutoffFrequency1', 2*fc-2.0*fdev, ...
     'CutoffFrequency2',2*fc+2*fdev,...
     'SampleRate', fs);
 
-inst_freq = filtfilt(lpFilt, inst_freq);
+inst_freq = filtfilt(BPfilt_obj, inst_freq);
 
 
 % Threshold the frequency to determine bit values
