@@ -108,7 +108,7 @@ x_baseband = x .* cos(2*pi*fc*t);
 
 % Compute the phase of the analytic signal
 % analytic_signal = hilbert(x_baseband);  % Hilbert transform
-analytic_signal = hilbert(x_baseband).*exp(-1i*2*pi*fc*t);
+analytic_signal = hilbert(x_baseband).*exp(-1i*2*pi*fc*t)/(2*pi*fdev);
 inst_phase      = unwrap(angle(analytic_signal));  % Unwrapped phase
 
 % Compute instantaneous frequency (derivative of phase)
@@ -128,7 +128,7 @@ inst_freq = filtfilt(lpFilt, inst_freq);
 
 
 % Threshold the frequency to determine bit values
-binary_sequence = inst_freq > 0; % ?????????????
+binary_sequence = inst_freq > 0; % rubbish?????????????
 
 % Resample at bit intervals
 sample_idxs               = round(samples_per_bit * (0:num_bits-1) + samples_per_bit / 2);
